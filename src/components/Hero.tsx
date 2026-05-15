@@ -11,7 +11,7 @@ export default function Hero() {
         className="w-full max-w-2xl px-4 flex justify-center"
       >
         <img 
-          src="/logo tło.svg" 
+          src="/logo-tlo.svg" 
           alt="SGH Legal Club Logo" 
           className="mx-auto"
           referrerPolicy="no-referrer"
