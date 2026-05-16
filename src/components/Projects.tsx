@@ -10,13 +10,30 @@ interface Project {
 }
 
 const projects: Project[] = [
-  { id: 'akademia', title: "Akademia spółek", description: "Opis projektu Akademia spółek pojawi się tutaj wkrótce." },
-  { id: 'follawus', title: "FollawUS", description: "Opis projektu FollawUS pojawi się tutaj wkrótce.", image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop" },
-  { id: 'moot', title: "Moot courts", description: "Opis projektu Moot courts pojawi się tutaj wkrótce." },
-  { id: 'horyzonty', title: "Prawne Horyzonty Biznesu", description: "Opis projektu Prawne Horyzonty Biznesu pojawi się tutaj wkrótce." },
-];
+  { 
+    id: 'akademia', 
+    title: "Akademia spółek", 
+    description: "Czy zastanawialiście się kiedyś, co odróżnia foundera, który wie, jak zbudować spółkę odporną na kryzysy od tego, który dowiaduje się o luakch w umowie dopiero przed sądem?\n\nNa te pytania szukamy odpowiedzi w projekcie Akademia Spółek, pod okiem niezastąpionych specjalistów z BLSK Kozłowski i Wspólnicy" 
+  },
+  { 
+    id: 'follawus', 
+    title: "FollawUS", 
+    description: "Kancelarie. Studenci. Job shadowing. Te trzy pojęcia najlepiej definiują FollawUs - projekt, który powstał po to, żebyście mogli zobaczyć, jak wygląda praca prawnika w nieco mniej zobowiązujący sposób, niż staż.", 
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop" 
+  },
+  { 
+    id: 'moot', 
+    title: "Moot courts", 
+    description: "Chcielibyście się dowiedzieć, jak wygląda postępowanie przed sądem, ale nie chcecie czytać KPC? Wychodzimy Wam na przeciw z inicjatywą, w której przyglądamy się temu, jak wygląda rozprawa, a następnie, pod czujnym okiem ekspertów, sami przeprowadzamy rozprawę w formule moot court." 
+  },
+  { 
+    id: 'horyzonty', 
+    title: "Prawne Horyzonty Biznesu", 
+    description: "Zastanawialiście się kiedyś, gdzie kończy biznes, a zaczyna prawo? My myślimy o tym non stop - a rozmawiamy na cyklu spotkań, dotykającym różnych prawnych aspektów prowadzenia biznesu - od odpowiedzialności prawnej menadżerów po prawne ograniczenia w korzystaniu z AI w biznesie." 
+  },
 
 interface ProjectCardProps {
+  key?: Key;
   project: Project;
   onClick: () => void;
   index: number;
@@ -106,10 +123,8 @@ export default function Projects() {
               
               <h3 className="text-4xl text-accent mb-8 pr-12">{selectedProject.title}</h3>
               <div className="text-white/80 text-lg leading-relaxed space-y-4">
-                <p>{selectedProject.description}</p>
-                <p>
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
+                {selectedProject.description}
+               
               </div>
             </motion.div>
           </motion.div>
