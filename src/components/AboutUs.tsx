@@ -1,6 +1,14 @@
 import { motion } from 'motion/react';
+import type { Key } from 'react';
 
-const TeamCard = ({ name, role, delay }: { name: string, role: string, photoId?: string, delay: number }) => (
+interface TeamCardProps {
+  key?: Key;
+  name: string;
+  role: string;
+  photoId?: string;
+  delay: number;
+}
+const TeamCard = ({ name, role, delay }: TeamCardProps) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
