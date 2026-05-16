@@ -31,7 +31,7 @@ const projects: Project[] = [
     title: "Prawne Horyzonty Biznesu", 
     description: "Zastanawialiście się kiedyś, gdzie kończy biznes, a zaczyna prawo? My myślimy o tym non stop - a rozmawiamy na cyklu spotkań, dotykającym różnych prawnych aspektów prowadzenia biznesu - od odpowiedzialności prawnej menadżerów po prawne ograniczenia w korzystaniu z AI w biznesie." 
   },
-
+]
 interface ProjectCardProps {
   key?: Key;
   project: Project;
